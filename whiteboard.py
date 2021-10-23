@@ -1,4 +1,6 @@
-from coincode import Account
+from coincode import Manage, Account, Trade
 
-account=Account()
-account.login()
+client=Account.login('username', 'password')
+print(client)
+
+
