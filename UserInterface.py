@@ -12,11 +12,14 @@ class window(tk.Tk):
         self.ignore=['', '', '', '', '', '']
         self.interval='5m'
         self.period='1 day ago UTC'
-        ## 
+        ## obtain markets
         self.markets=self.client.get_markets(self.base)
+        ## create blanco datalist
         self.datalist=self.create_datalist()
+        ## fill datalist continuously
+        self.data_aquisition()
         #self.market_list()
-        print(self.markets)
+        #print(self.markets)
     
     def login(self):
         return client(api_key=pkey, api_secret=skey)
