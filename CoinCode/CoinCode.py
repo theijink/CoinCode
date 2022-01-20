@@ -1,7 +1,7 @@
 from binance.client import Client
 
 class client(Client):
-    def __init__(self, pkey, skey, requests_params=None, tld='com', testnet=False):
+    def __init__(self, api_key, api_secret, requests_params=None, tld='com', testnet=False):
         super().__init__(api_key, api_secret, requests_params, tld, testnet)
 
     def get_markets(self, base):
